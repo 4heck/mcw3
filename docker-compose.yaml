@@ -1,0 +1,34 @@
+version: '3.1'
+services:
+  postgres:
+    restart: "always"
+    image: postgres:12.0
+    ports:
+      - "5432:5432"
+    environment:
+      - "POSTGRES_USER=monitoring_admin"
+      - "POSTGRES_PASSWORD=password"
+      - "POSTGRES_DB=db_monitoring"
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "800k"
+        max-file: "10"
+
+  django-admin:
+    restart: "always"
+    build: ./app
+    command: 'bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"'
+    ports:
+      - '8000:8000'
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "800k"
+        max-file: "10"
