@@ -10,7 +10,7 @@ ADMIN_SITE_HEADER = "Parsing Admin Panel"
 
 ALLOWED_HOSTS = ['*']
 
-DEBUG = True
+DEBUG = False
 
 STATIC_URL = '/static/'
 
