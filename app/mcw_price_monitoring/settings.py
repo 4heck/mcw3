@@ -4,11 +4,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'ju6h12ev!&l_r#byfz3p57&gqamng0mh%(9zh6d6rp-y=%&%bw'
 
-ADMIN_SITE_HEADER = "Parsing Admin Panel"
+ADMIN_SITE_HEADER = "Parsing Admin Panel v3"
 
-# ALLOWED_HOSTS = ['134.0.117.214', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['134.0.117.214', '127.0.0.1', 'localhost']
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
 
 DEBUG = False
 
