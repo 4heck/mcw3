@@ -8,7 +8,7 @@ ADMIN_SITE_HEADER = "Parsing Admin Panel"
 
 # ALLOWED_HOSTS = ['134.0.117.214', '127.0.0.1', 'localhost']
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 DEBUG = True
 
