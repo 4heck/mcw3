@@ -84,8 +84,8 @@ if postgres:
             'NAME': 'db_monitoring',
             'USER': 'monitoring_admin',
             'PASSWORD': 'password',
-            'HOST': '0.0.0.0',
-            # 'HOST': os.environ.get('DB_HOST', '0.0.0.0'),
+            # 'HOST': '0.0.0.0',
+            'HOST': os.environ.get('DB_HOST', '0.0.0.0'),
             'PORT': '5432'
         }
     }
