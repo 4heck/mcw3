@@ -8,9 +8,11 @@ ADMIN_SITE_HEADER = "Parsing Admin Panel v3"
 
 # ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '0.0.0.0'),
 
-ALLOWED_HOSTS = ['127.0.0.1', '134.0.117.214']
+# ALLOWED_HOSTS = ['127.0.0.1', '134.0.117.214', 'localhost']
 
-DEBUG = False
+ALLOWED_HOSTS = ['*']
+
+DEBUG = os.environ.get('DEBUG', True)
 
 STATIC_URL = '/static/'
 
